@@ -1,0 +1,24 @@
+.New__content
+  .New__content__topic
+    .New__content__topic__logo
+      -#= link_to root_path do
+        -#=image_tag "logo.png", alt: "FURIMA：", class: "New__content__topic__logo__img"
+    = form_with model: @user, url: user_registration_path, local: true do |f|
+      .New__content__topic__info
+        %p.registration__text
+          会員情報入力
+          = render 'layouts/error_form_user', locals: { user: @user }
+          //= 名前
+        .registration__nickname__form
+          .registration__nickname__form__explain
+            %p.nickname お名前
+            %p.absolute 必須
+          .registration__nickname__form__input
+            = f.text_field :name, class: "registration__nickname__form__input__type form-padding", placeholder: "(例)フリマ太郎"
+                //= ニックネーム
+        .registration__nickname__form
+          .registration__nickname__form__explain
+            %p.nickname お名前
+            %p.absolute 必須
+          .registration__nickname__form__input
+            = f.text_field :name, class: "registration__nickname__form__input__type form-padding", placeholder: "(例)フリマ太郎"
