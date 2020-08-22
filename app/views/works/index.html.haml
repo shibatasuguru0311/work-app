@@ -1,1 +1,33 @@
-hello haml!
+.toppage
+  .header
+  .header-list
+    .header-list__content
+      .header-list__content--left
+        .header-list__content--left--login ログイン
+        .header-list__content--left--logout ログアウト
+        .header-list__content--left--new  新規登録
+      .header-list__content--right
+        .header-list__content--right--mypage  マイページ
+  .main
+    .main-content1
+      .main-content1__inner
+        .main-content1__inner__image
+        .main-content1__inner__text
+          .main-content1__inner__text__work こけだまワークショップ
+          .main-content1__inner__text__user 無印良品A店
+    .main-content2
+      .main-content2__inner
+        .main-content2__inner__image
+        .main-content2__inner__text
+          .main-content2__inner__text__work こけだまワークショップ
+          .main-content2__inner__text__user 無印良品A店
+  .footer
+
+
+  -#- if user_signed_in?
+  .purchasebtn-index
+    = link_to "開催する", root_path, method: :get, class: 'sell-btn link-text'
+    .purchasebtn-index__text
+    .purchasebtn-index__icon
+      -#= image_tag "icon_camera.png", alt: "出品する", class: "purchasebtn-index__icon__camera"
+-#- else
