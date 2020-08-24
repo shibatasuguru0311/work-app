@@ -3,11 +3,17 @@
   .header-list
     .header-list__content
       .header-list__content--left
-        .header-list__content--left--login ログイン
-        .header-list__content--left--logout ログアウト
-        .header-list__content--left--new  新規登録
-      .header-list__content--right
-        .header-list__content--right--mypage  マイページ
+        - if user_signed_in?
+          .header-list__content--left--logout
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-list__content--left--logout__btn"
+          .header-list__content--left--mypage
+            = link_to "マイページ", root_path, class: "header-list__content--left--mypage__btn"
+        - else
+          .header-list__content--left--login 
+            = link_to "ログイン", new_user_session_path, class: "header-list__content--left--login__btn"
+          .header-list__content--left--new
+            = link_to "新規会員登録", new_user_registration_path, class: "header-list__content--left--new__btn"
+
   .main
     .main-content1
       .main-content1__inner
@@ -24,10 +30,10 @@
   .footer
 
 
-  -#- if user_signed_in?
-  .purchasebtn-index
-    = link_to "開催する", root_path, method: :get, class: 'sell-btn link-text'
-    .purchasebtn-index__text
-    .purchasebtn-index__icon
-      -#= image_tag "icon_camera.png", alt: "出品する", class: "purchasebtn-index__icon__camera"
--#- else
+  - if user_signed_in?
+    .purchasebtn-index
+      = link_to "開催する", root_path, method: :get, class: 'sell-btn link-text'
+      .purchasebtn-index__text
+      .purchasebtn-index__icon
+        -#= image_tag "icon_camera.png", alt: "出品する", class: "purchasebtn-index__icon__camera"
+  - else
