@@ -1,0 +1,12 @@
+%h1 ワークショップ詳細
+
+.name-del      
+  =@work.name
+.name-del      
+  =@work.introduction
+.name-del      
+  =@work.address
+.name-del      
+  =@work.url
+.name-del 
+  = image_tag @work.photo.url, :size => '500x500', :alt => "画像", :class => "Product-show__img"

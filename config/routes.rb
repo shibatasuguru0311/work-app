@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 resources :users, only: [:show,:edit,:update]
 resources :messages, only: [:create]
 resources :rooms, only: [:create,:show]
+resources :works
 end

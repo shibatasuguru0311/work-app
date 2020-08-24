@@ -1,0 +1,19 @@
+.AccountPage
+  .AccountPage__title
+    %h2 ログイン
+    = render "devise/shared/links"
+    %p.Image
+  .AccountPage__form
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .FormBox
+        .FormBox__label--normal
+          = f.label :email
+        .FormBox__input--normal
+          = f.email_field :email, autofocus: true
+        .FormBox
+          .FormBox__label--normal
+            = f.label :password
+          .FormBox__input--normal
+            = f.password_field :password, autocomplete: "off"
+        .actions
+          = f.submit "スタート", class: 'Button_UserButton'
