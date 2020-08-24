@@ -10,3 +10,6 @@
   =@work.url
 .name-del 
   = image_tag @work.photo.url, :size => '500x500', :alt => "画像", :class => "Product-show__img"
+.edit__box__btn__inner__return
+  = link_to "トップページへ戻る", root_path, method: :get, class: 'return-btn'
+
