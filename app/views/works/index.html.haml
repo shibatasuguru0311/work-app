@@ -32,7 +32,7 @@
 
   - if user_signed_in?
     .purchasebtn-index
-      = link_to "開催する", root_path, method: :get, class: 'sell-btn link-text'
+      = link_to "開催する", new_work_path, method: :get, class: 'sell-btn link-text'
       .purchasebtn-index__text
       .purchasebtn-index__icon
         -#= image_tag "icon_camera.png", alt: "出品する", class: "purchasebtn-index__icon__camera"
