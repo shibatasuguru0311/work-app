@@ -14,19 +14,22 @@
           .header-list__content--left--new
             = link_to "新規会員登録", new_user_registration_path, class: "header-list__content--left--new__btn"
 
-  .main
-    .main-content1
-      .main-content1__inner
-        .main-content1__inner__image
-        .main-content1__inner__text
-          .main-content1__inner__text__work こけだまワークショップ
-          .main-content1__inner__text__user 無印良品A店
-    .main-content2
-      .main-content2__inner
-        .main-content2__inner__image
-        .main-content2__inner__text
-          .main-content2__inner__text__work こけだまワークショップ
-          .main-content2__inner__text__user 無印良品A店
+  .pick-bra__inner__topic__main
+    - @works.slice(1..5).each do |work|
+      .pick-bra__inner__topic__main--one
+        = link_to work_path(work),class:"link-all"  do
+          .pick-bra__inner__topic__main--one__img
+            = image_tag work.photo.url, class: "pick-bra__inner__topic__main--one__img__picture"
+          .pick-bra__inner__topic__main--one__content
+            .pick-bra__inner__topic__main--one__content__group
+              %li.pick-bra__name
+                = work.name
+              .pick-bra__in
+                .pick-bra__middle
+                  %li.pick-bra__middle__price
+                    = work.address
+                  %li.pick-bra__middle__price ★1
+
   .footer
 
 
