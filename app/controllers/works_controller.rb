@@ -1,5 +1,6 @@
 class WorksController < ApplicationController
   def index
+    @works = Work.order('created_at DESC')
   end
 
   def new
