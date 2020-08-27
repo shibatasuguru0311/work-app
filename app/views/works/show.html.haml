@@ -11,13 +11,10 @@
 .name-del 
   = image_tag @work.photo.url, :size => '500x500', :alt => "画像", :class => "Product-show__img"
 .detail__content__inner__information__data__footer__star ★スター
-- if user_signed_in?
-  - if current_user.id == @work.entry
-    = link_to edit_item_path(@work), calss: "editBtn" do
-      .detail__content__inner__information__data__footer__edit 編集する
-    = link_to work_path(@work),method: :delete, class: "destroyBtn" do
-      .detail__content__inner__information__data__footer__destroy 削除する
-  - else
-- else
+.edit
+  = link_to edit_work_path(@work), calss: "editBtn" do
+    .detail__content__inner__information__data__footer__edit 編集する
+  = link_to work_path(@work),method: :delete, class: "destroyBtn" do
+    .detail__content__inner__information__data__footer__destroy 削除する
   .top__box__btn__inner__return
     = link_to "トップページへ戻る", root_path, method: :get, class: 'return-btn'
