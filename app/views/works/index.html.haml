@@ -15,7 +15,7 @@
             = link_to "新規会員登録", new_user_registration_path, class: "header-list__content--left--new__btn"
 
   .pick-bra__inner__topic__main
-    - @works.slice(1..5).each do |work|
+    - @works.first(3).each do |work|
       .pick-bra__inner__topic__main--one
         = link_to work_path(work),class:"link-all"  do
           .pick-bra__inner__topic__main--one__img

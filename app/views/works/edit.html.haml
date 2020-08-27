@@ -1,0 +1,51 @@
+.edit
+  .edit__box
+    .edit__box__content
+    = form_with model: @work, local: true, method: :patch, class: "edit__box__content" do |f|
+      .edit__box__content__inner
+        %p.edit-title ワークショップ情報の入力
+        -#商品名
+        .edit__box__content__inner__name
+          .edit__box__content__inner__name__explain
+            %p.name ワークショップ名
+            %p.absolute 必須
+          .edit__box__content__inner__name__form__input
+            = f.text_field :name, class: "edit__box__content__inner__name__form__input__text__type", placeholder: "　最大40文字まで"
+            -#商品の説明
+        .edit__box__content__inner__introduction
+          .edit__box__content__inner__introduction__explain
+            %p.introduction ワークショップの説明
+            %p.absolute 必須
+          .edit__box__content__inner__introduction__form__input
+            = f.text_area :introduction, class: "edit__box__content__inner__introduction__form__input__text__type", placeholder: "　最大1000文字まで"
+            -#商品の金額
+        .edit__box__content__inner__price
+          .edit__box__content__inner__price__explain
+            %p.price 住所
+            %p.absolute 必須
+          .edit__box__content__inner__price__form__input
+            = f.text_field :address, class: "edit__box__content__inner__price__form__input__text__type", placeholder: "開催場所の入力"
+            -#商品のカテゴリー
+        .edit__box__content__inner__price
+          .edit__box__content__inner__price__explain
+            %p.price URL
+            %p.absolute 必須
+          .edit__box__content__inner__price__form__input
+            = f.text_field :url, class: "edit__box__content__inner__price__form__input__text__type", placeholder: "店舗のURL"
+            -#商品のカテゴリー
+        .edit__box__content__inner__price
+          .edit__box__content__inner__price__explain
+            %p.price ワークショップイメージ写真
+            %p.absolute 必須
+          .edit__box__content__inner__price__form__input
+          .image_file
+            = f.label :photo
+          .field_input
+            = f.file_field :photo
+
+      .edit__box__btn
+        .edit__box__btn__inner
+          .edit__box__btn__inner__edit
+            =f.submit "出品する", class: "edit-btn"
+          .edit__box__btn__inner__return
+            = link_to "戻る", root_path, method: :get, class: 'return-btn'
