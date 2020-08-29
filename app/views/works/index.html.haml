@@ -1,42 +1,77 @@
 .toppage
   .header
+    = render "header"
   .header-list
     .header-list__content
-      .header-list__content--left
-        - if user_signed_in?
-          .header-list__content--left--logout
-            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-list__content--left--logout__btn"
-          .header-list__content--left--mypage
-            = link_to "マイページ", root_path, class: "header-list__content--left--mypage__btn"
-        - else
-          .header-list__content--left--login 
-            = link_to "ログイン", new_user_session_path, class: "header-list__content--left--login__btn"
-          .header-list__content--left--new
-            = link_to "新規会員登録", new_user_registration_path, class: "header-list__content--left--new__btn"
+      - if user_signed_in?
+        .header-list__content--logout
+          = link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "header-list__content--logout__btn"
+        .header-list__content--mypage
+          = link_to "MY PAGE", root_path, class: "header-list__content--mypage__btn"
+      - else
+        .header-list__content--login 
+          = link_to "LOG IN", new_user_session_path, class: "header-list__content--login__btn"
+        .header-list__content--new
+          = link_to "SIGN IN", new_user_registration_path, class: "header-list__content--new__btn"
+  .topimage
+    = image_tag "men3.jpg", class: "topimage__img"
+  .header-title new workshop shared
+  .main
+    .main__inner
+      .workbox
+        - @works.first(5).each do |work|
+          .workbox__content
+            = link_to work_path(work),class:"link-all"  do
+              .workbox__content__photo
+                = image_tag work.photo.url, class: "workbox__content__photo__img"
+              .workbox__content__group
+                .workbox__content__group__text
+                  %li.workshop__name
+                    = work.name
+                  .workshop__in
+                    .workshop__middle
+                      %li.workshop__address
+                        = work.address
+      .workbox
+        - @works.slice(5..9).each do |work|
+          .workbox__content
+            = link_to work_path(work),class:"link-all"  do
+              .workbox__content__photo
+                = image_tag work.photo.url, class: "workbox__content__photo__img"
+              .workbox__content__group
+                .workbox__content__group__text
+                  %li.workshop__name
+                    = work.name
+                  .workshop__in
+                    .workshop__middle
+                      %li.workshop__address
+                        = work.address
+      .workbox
+        - @works.slice(10..14).each do |work|
+          .workbox__content
+            = link_to work_path(work),class:"link-all"  do
+              .workbox__content__photo
+                = image_tag work.photo.url, class: "workbox__content__photo__img"
+              .workbox__content__group
+                .workbox__content__group__text
+                  %li.workshop__name
+                    = work.name
+                  .workshop__in
+                    .workshop__middle
+                      %li.workshop__address
+                        = work.address
 
-  .pick-bra__inner__topic__main
-    - @works.first(3).each do |work|
-      .pick-bra__inner__topic__main--one
-        = link_to work_path(work),class:"link-all"  do
-          .pick-bra__inner__topic__main--one__img
-            = image_tag work.photo.url, class: "pick-bra__inner__topic__main--one__img__picture"
-          .pick-bra__inner__topic__main--one__content
-            .pick-bra__inner__topic__main--one__content__group
-              %li.pick-bra__name
-                = work.name
-              .pick-bra__in
-                .pick-bra__middle
-                  %li.pick-bra__middle__price
-                    = work.address
-                  %li.pick-bra__middle__price ★1
-
+  .pagenation
+  .bottomimage
+    = image_tag "men4.jpg", class: "bottomimage__img"
   .footer
+    = render "footer"
 
 
   - if user_signed_in?
-    .purchasebtn-index
-      = link_to "開催する", new_work_path, method: :get, class: 'sell-btn link-text'
-      .purchasebtn-index__text
-      .purchasebtn-index__icon
-        -#= image_tag "icon_camera.png", alt: "出品する", class: "purchasebtn-index__icon__camera"
+    .startbtn
+      = link_to "play work", new_work_path, method: :get, class: 'startbtn__link'
+      .startbtn__text
+      .startbtn__icon
+        = image_tag "triangle-eye.png", class: "eye"
   - else
