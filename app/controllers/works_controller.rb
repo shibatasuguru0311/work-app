@@ -1,6 +1,7 @@
 class WorksController < ApplicationController
   def index
     @works = Work.order('created_at DESC')
+    @works = Work.all.page(params[:page]).per(5)
   end
 
   def new
