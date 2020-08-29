@@ -1,8 +1,9 @@
 .AccountPage
   .AccountPage__title
-    %h2 ログイン
     = render "devise/shared/links"
-    %p.Image
+  .picture
+    = link_to root_path do
+      =image_tag "triangle-eye.png", alt: "APP：", class: "header__inner__main__logo__img"
   .AccountPage__form
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .FormBox

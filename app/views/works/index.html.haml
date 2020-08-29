@@ -19,7 +19,7 @@
   .main
     .main__inner
       .workbox
-        - @works.first(5).each do |work|
+        - @works.each do |work|
           .workbox__content
             = link_to work_path(work),class:"link-all"  do
               .workbox__content__photo
@@ -32,34 +32,36 @@
                     .workshop__middle
                       %li.workshop__address
                         = work.address
-      .workbox
-        - @works.slice(5..9).each do |work|
-          .workbox__content
-            = link_to work_path(work),class:"link-all"  do
-              .workbox__content__photo
-                = image_tag work.photo.url, class: "workbox__content__photo__img"
-              .workbox__content__group
-                .workbox__content__group__text
-                  %li.workshop__name
-                    = work.name
-                  .workshop__in
-                    .workshop__middle
-                      %li.workshop__address
-                        = work.address
-      .workbox
-        - @works.slice(10..14).each do |work|
-          .workbox__content
-            = link_to work_path(work),class:"link-all"  do
-              .workbox__content__photo
-                = image_tag work.photo.url, class: "workbox__content__photo__img"
-              .workbox__content__group
-                .workbox__content__group__text
-                  %li.workshop__name
-                    = work.name
-                  .workshop__in
-                    .workshop__middle
-                      %li.workshop__address
-                        = work.address
+      = paginate @works
+      -# .workbox
+      -#   - @works.slice(5..9).each do |work|
+      -#     .workbox__content
+      -#       = link_to work_path(work),class:"link-all"  do
+      -#         .workbox__content__photo
+      -#           = image_tag work.photo.url, class: "workbox__content__photo__img"
+      -#         .workbox__content__group
+      -#           .workbox__content__group__text
+      -#             %li.workshop__name
+      -#               = work.name
+      -#             .workshop__in
+      -#               .workshop__middle
+      -#                 %li.workshop__address
+      -#                   = work.address
+      -# .workbox
+      -#   - @works.slice(10..14).each do |work|
+      -#     .workbox__content
+      -#       = link_to work_path(work),class:"link-all"  do
+      -#         .workbox__content__photo
+      -#           = image_tag work.photo.url, class: "workbox__content__photo__img"
+      -#         .workbox__content__group
+      -#           .workbox__content__group__text
+      -#             %li.workshop__name
+      -#               = work.name
+      -#             .workshop__in
+      -#               .workshop__middle
+      -#                 %li.workshop__address
+      -#                   = work.address
+        -# = paginate @works
 
   .pagenation
   .bottomimage
