@@ -7,4 +7,9 @@ class User < ApplicationRecord
          has_many :messages, dependent: :destroy
          has_many :entries, dependent: :destroy
        
+
+
+validates :name, presence: true, uniqueness: true, length: { maximum: 10 } 
+validates :email, presence: true, uniqueness: true
+validates :image, presence: true
 end
