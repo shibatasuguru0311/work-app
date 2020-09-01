@@ -7,7 +7,7 @@
         .header-list__content--logout
           = link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "header-list__content--logout__btn"
         .header-list__content--mypage
-          = link_to "MY PAGE", root_path, class: "header-list__content--mypage__btn"
+          = link_to "MY PAGE", user_path(current_user.id), method: :get, class: "header-list__content--mypage__btn"
       - else
         .header-list__content--login 
           = link_to "LOG IN", new_user_session_path, class: "header-list__content--login__btn"
