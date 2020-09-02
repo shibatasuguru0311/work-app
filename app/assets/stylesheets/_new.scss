@@ -1,0 +1,199 @@
+//必須項目のアイコン
+@mixin absolute{
+  font-size:6px;
+  background-color: #ff40ef;
+  color:white;
+  padding: 5px 7px 3px 7px;
+  margin-left:5px;
+  height: 20px;
+  font-weight:bold;
+}
+//入寮項目名
+@mixin title{
+  font-size: 20px;
+  padding-bottom:0px;
+  margin-right:5px;
+  font-weight:bold;
+}
+//入力項目の打ち込み箇所
+@mixin text-content{
+  width:300px;
+  height:40px;
+  border: 1px solid rgb(180, 179, 179);
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom:30px;
+  margin-top:5px;
+  padding-left: 10px;
+}
+
+.edit{
+  &__box{
+    &__logo{
+      text-align:center;
+      padding:30px 0px;
+      &__img{
+        width:150px;
+        height:100px;
+        text-align:center;
+      }
+    }
+    &__content{
+      background-color:rgba(241, 239, 237, 0.904);
+      text-align: center;
+      padding: 30px 0px 0px 0px;
+      width:100vw;
+      &__inner{
+        background-color: white;
+        text-align:center;
+        padding:0px 20px;
+        width:700px;
+        height:1100px;
+        margin: 0 auto; 
+        p.edit-title{
+          font-size:24px;
+          padding-top:50px;
+          font-weight: bold;
+          margin-bottom:80px;
+        }
+        &__name{
+          &__explain{
+            display: flex;
+            justify-content: center;
+            padding-bottom:0px;
+            p.name{
+              @include title;
+            }
+            p.absolute{
+              @include absolute;
+            }
+          }
+          &__form__input{
+            &__text__type{
+                @include text-content;
+              }
+            
+          }
+        }
+        &__introduction{
+          &__explain{
+            display: flex;
+            justify-content: center;
+            padding-bottom:0px;
+            p.introduction{
+              @include title;
+            }
+            p.absolute{
+              @include absolute;
+            }
+          }
+          &__form__input{
+            &__text__type{
+              width:500px;
+              height:200px;
+              border: 1px solid rgb(180, 179, 179);
+              font-size: 16px;
+              border-radius: 5px;
+              cursor: pointer;
+              margin-bottom:30px;
+              margin-top:5px;
+              padding-left: 10px;
+              }
+            
+          }
+        }
+        &__address{
+          &__explain{
+            display: flex;
+            justify-content: center;
+            padding-bottom:0px;
+            p.address{
+              @include title;
+            }
+            p.absolute{
+              @include absolute;
+            }
+          }
+          &__form__input{
+            &__text__type{
+                @include text-content;
+              }
+            
+          }
+        }
+        &__url{
+          &__explain{
+            display: flex;
+            justify-content: center;
+            padding-bottom:0px;
+            p.url{
+              @include title;
+            }
+            p.absolute{
+              @include absolute;
+            }
+          }
+          &__form__input{
+            &__text__type{
+                @include text-content;
+              }
+            
+          }
+        }
+        &__photo{
+          &__explain{
+            display: flex;
+            justify-content: center;
+            padding-bottom:0px;
+            p.photo{
+              @include title;
+              margin-bottom:30px;
+            }
+            p.absolute{
+              @include absolute;
+            }
+          }
+          &__form__input{
+            &__text__type{
+                @include text-content;
+              }
+            
+          }
+        }
+      }
+      .edit__box__btn{
+        &__inner{
+          &__edit{
+            margin-top:30px;
+            padding-bottom:50px;
+            .edit-btn{
+              width:200px;
+              height:50px;
+              color:white;
+              background-color:rgb(115, 117, 115);
+              font-size:20px;
+              border:none;
+
+            }
+          }
+          &__return{
+            margin-top:30px;
+            padding-bottom:50px;
+            .return-btn{
+              width:200px;
+              height:50px;
+              color:white;
+              background-color:rgb(115, 117, 115);
+              font-size:20px;
+              border:none;
+              padding:13px 80px;
+              text-decoration:none;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
