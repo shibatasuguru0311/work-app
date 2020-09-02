@@ -8,6 +8,9 @@
           = link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "header-list__content--logout__btn"
         .header-list__content--mypage
           = link_to "MY PAGE", user_path(current_user.id), method: :get, class: "header-list__content--mypage__btn"
+        .header-list__content--start
+          = link_to "PLAY WORK", new_work_path, method: :get, class: 'header-list__content--start__btn'
+
       - else
         .header-list__content--login 
           = link_to "LOG IN", new_user_session_path, class: "header-list__content--login__btn"
@@ -70,10 +73,10 @@
     = render "footer"
 
 
-  - if user_signed_in?
-    .startbtn
-      = link_to "play work", new_work_path, method: :get, class: 'startbtn__link'
-      .startbtn__text
-      .startbtn__icon
-        = image_tag "triangle-eye.png", class: "eye"
-  - else
+  -# - if user_signed_in?
+  -#   .startbtn
+  -#     = link_to "play work", new_work_path, method: :get, class: 'startbtn__link'
+  -#     .startbtn__text
+  -#     .startbtn__icon
+  -#       = image_tag "triangle-eye.png", class: "eye"
+  -# - else
