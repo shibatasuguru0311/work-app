@@ -1,12 +1,12 @@
 .mypage
-  -#.mypage-box= @user.follow_count 
-  -# = link_to "フォロー", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get 
-    -#クリックすると、フォローリストに飛ぶ
-    -#.mypage-inner= @user.followers_count 
-  -#= link_to "フォロワー", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get 
-    -#クリックすると、フォロワーリストに飛ぶ
--#- if current_user.id != @user.id 
--#= render 'follow_form' 
+  .mypage-box= @user.follow_count 
+  = link_to "フォロー", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get 
+  -#クリックすると、フォローリストに飛ぶ
+  .mypage-inner= @user.followers_count 
+  = link_to "フォロワー", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get 
+  -#クリックすると、フォロワーリストに飛ぶ
+- if current_user.id != @user.id 
+= render 'follow_form' 
   -#ユーザーがカレントユーザーじゃなかったら、'_follow_form.html.erb'を表示
 .edit__box__btn__inner__return
   = link_to "戻る", root_path, method: :get, class: 'return-btn'
