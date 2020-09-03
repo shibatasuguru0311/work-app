@@ -1,15 +1,14 @@
 %h1 ワークショップ詳細
-
 .name-del      
   =@work.name
+.name-del 
+  = image_tag @work.photo.url, :size => '500x500', :alt => "画像", :class => "Product-show__img"
 .name-del      
   =@work.introduction
 .name-del      
   =@work.address
 .name-del      
   =@work.url
-.name-del 
-  = image_tag @work.photo.url, :size => '500x500', :alt => "画像", :class => "Product-show__img"
 .detail__content__inner__information__data__footer__star ★スター
 .edit
   = link_to edit_work_path(@work), calss: "editBtn" do
