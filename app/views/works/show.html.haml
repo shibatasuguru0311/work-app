@@ -1,19 +1,24 @@
-%h1 ワークショップ詳細
-.name-del      
-  =@work.name
-.name-del 
-  = image_tag @work.photo.url, :size => '500x500', :alt => "画像", :class => "Product-show__img"
-.name-del      
-  =@work.introduction
-.name-del      
-  =@work.address
-.name-del      
-  =@work.url
-.detail__content__inner__information__data__footer__star ★スター
+.show
+  .show__box
+    .show__box__inner
+      %h1 ワークショップ詳細
+      .nwork-name     
+        =@work.name
+      .work-photo 
+        = image_tag @work.photo.url, :size => '500x400', :alt => "画像", :class => "work-photo__img"
+      .work-introduction      
+        =@work.introduction
+      .work-address      
+        =@work.address
+      .work-url      
+        =@work.url
+      .infomation
+        .infomation__star ★スター
+        .infomation__directmail ダイレクトメッセージを送る
 .edit
   = link_to edit_work_path(@work), calss: "editBtn" do
-    .detail__content__inner__information__data__footer__edit 編集する
+    .editBtn__btn 編集する
   = link_to work_path(@work),method: :delete, class: "destroyBtn" do
-    .detail__content__inner__information__data__footer__destroy 削除する
-  .top__box__btn__inner__return
+    .destroyBtn__btn 削除する
+  .return
     = link_to "トップページへ戻る", root_path, method: :get, class: 'return-btn'
