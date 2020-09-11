@@ -4,15 +4,16 @@
       .show__box__inner__left
         .work-photo 
           = image_tag @work.photo.url, :size => '500x400', :alt => "画像", :class => "work-photo__img"
-        .btn-box
-          = link_to edit_work_path(@work), calss: "editBtn" do
-            .editBtn__btn EDIT
-          = link_to work_path(@work),method: :delete, class: "destroyBtn" do
-            .destroyBtn__btn DESTROY
-          = link_to work_path(@work),method: :delete, class: "starBtn" do
-            .starBtn__btn ★STAR
-          -# = link_to work_path(@work),method: :delete, class: "dmBtn" do
-          -#   .dmBtn__btn SENDーDM
+        - if user_signed_in? 
+          - if current_user.id == @work.user_id
+            .btn-box
+            .editBtn__btn
+            = link_to "EDIT", edit_work_path(@work), calss: "editBtn"
+            .destroyBtn__btn
+            = link_to "DESTROY", work_path(@work),method: :delete, class: "destroyBtn"
+
+          - else
+        - else
       .show__box__inner__right
         %h1 ▲WORKSHOP
         .work-name     
@@ -26,5 +27,10 @@
         .work-url-sub  ▲URL
         .work-url      
           =@work.url
+        .work-user-sub  ▲開催者マイページ
+        .work-user      
+          = link_to "#{@work.user.name}", user_path(@work.user_id), method: :get, class: "work-user"
 .footer
   = render "footer"
+
+

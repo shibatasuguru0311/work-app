@@ -51,7 +51,7 @@ class WorksController < ApplicationController
 
   private
   def work_params
-    params.require(:work).permit(:name, :introduction, :address, :url, :photo, user_ids: [])
+    params.require(:work).permit(:name, :introduction, :address, :url, :photo, user_ids: []).merge(user_id: current_user.id)
   end
 
 end

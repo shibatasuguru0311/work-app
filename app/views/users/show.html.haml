@@ -19,6 +19,15 @@
         .mypage__box__inner__followersbox__main= @user.followers_count
         = link_to "フォロワーリスト", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get, class: :followers
         -#クリックすると、フォロワーリストに飛ぶ
+      - if user_signed_in?
+        - unless @user.id == current_user.id
+          - if @haveRoom == true
+            = link_to "ダイレクトメッセージ", room_path(@roomId)
+          - else
+            = form_with(model:@room, local: true) do |f|
+              = fields_for @entry do |e|
+                = e.hidden_field :user_id, value: @user.id
+              = f.submit "ダイレクトメッセージ"
       .mypage-btn
         .mypage__box__inner__dm
           = link_to "DMを送る", root_path, method: :get, class: 'dm-btn'

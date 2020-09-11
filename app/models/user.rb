@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
          has_many :messages, dependent: :destroy
          has_many :entries, dependent: :destroy
+         has_many :works, dependent: :destroy, foreign_key: :work_user_id
   
   acts_as_followable
   acts_as_follower
