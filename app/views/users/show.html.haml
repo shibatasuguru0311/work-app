@@ -1,12 +1,37 @@
-.mypage
-  .mypage-box= @user.follow_count 
-  = link_to "フォロー", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get 
-  -#クリックすると、フォローリストに飛ぶ
-  .mypage-inner= @user.followers_count 
-  = link_to "フォロワー", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get 
-  -#クリックすると、フォロワーリストに飛ぶ
-- if current_user.id != @user.id 
-= render 'follow_form' 
-  -#ユーザーがカレントユーザーじゃなかったら、'_follow_form.html.erb'を表示
-.edit__box__btn__inner__return
-  = link_to "戻る", root_path, method: :get, class: 'return-btn'
+.mypage 
+  .mypage__box
+    .mypage__box__inner
+      .mypage__box__inner__photo
+        = image_tag @user.image.url, :size => '500x400', :alt => "画像", :class => "user-photo__img"
+      .mypage__box__inner__profile
+        =@user.profile
+      .mypage__box__inner__namebox
+        .mypage__box__inner__namebox__sub ▲NAME: 
+        .mypage__box__inner__namebox__main
+          =@user.name
+      .mypage__box__inner__followbox
+        .mypage__box__inner__followbox__sub ▲FOLLOW: 
+        .mypage__box__inner__followbox__main= @user.follow_count 
+        = link_to "フォローリスト", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get, class: :follow
+        -#クリックすると、フォローリストに飛ぶ
+      .mypage__box__inner__followersbox
+        .mypage__box__inner__followersbox__sub ▲FOLLOWERS:  
+        .mypage__box__inner__followersbox__main= @user.followers_count
+        = link_to "フォロワーリスト", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get, class: :followers
+        -#クリックすると、フォロワーリストに飛ぶ
+      .mypage-btn
+        .mypage__box__inner__dm
+          = link_to "DMを送る", root_path, method: :get, class: 'dm-btn'
+        .mypage__box__inner__return
+          = link_to "戻る", root_path, method: :get, class: 'return-btn'
+        - if current_user.id != @user.id 
+          = link_to "気になる削除", {controller: :users,action: :unfollow,user_id: @user.id}, method: :put, class:"care"
+          -#ユーザーがカレントユーザーじゃなかったら、'_follow_form.html.erb'を表示
+        - else
+          .like
+            = link_to "気になる", {controller: :users,action: :follow,user_id: @user.id}, method: :put ,class:"care" 
+          .like
+            = link_to "EDIT", edit_user_path(@user), calss: "care"
+              
+.footer
+  = render "works/footer"
