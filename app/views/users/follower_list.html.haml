@@ -1,0 +1,5 @@
+- @user.followers.each do |user|
+  = user.name
+  = link_to '詳細', user_path(user)
+.edit__box__btn__inner__return
+  = link_to "いトップページへ戻る", root_path, method: :get, class: 'return-btn'

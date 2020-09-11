@@ -1,0 +1,43 @@
+.Account-in
+  .Account-box
+    .picture
+      = link_to root_path do
+        =image_tag "triangle.png", alt: "APP：", class: "picture-img"
+    .AccountPage__form
+      = form_with model: @user, local: true, method: :patch, class: "edit__box__content" do |f|
+        .signin-title SIGN IN
+        .FormField
+          .FormField__label--normal
+            = f.label :name
+          .FormField__input--normal
+            = f.text_field :name, autofocus: true
+        .FormField
+          .FormField__label--normal
+            = f.label :email
+          .FormField__input--normal
+            = f.email_field :email 
+          .FormField__label--normal
+            = f.label :photo
+          .FormField__input--normal
+            = f.file_field :image
+        .FormField
+          .FormField__label--normal
+            = f.label :profile
+          .FormField__input--normal
+            = f.text_area :profile 
+        -# .FormField
+        -#   .FormField__label--normal
+        -#     = f.label :password
+        -#   .FormField__input--normal
+        -#     = f.password_field :password, autocomplete: "off"
+        -# .FormField
+        -#   .FormField__label--normal
+        -#     = f.label :password_confirmation
+        -#   .FormField__input--normal
+        -#     = f.password_field :password_confirmation, autocomplete: "off"
+        .actions
+          = f.submit "Create Account", class: 'actions-btn'
+.footer
+= render "works/footer"
+      
+        
