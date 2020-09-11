@@ -18,16 +18,45 @@
 
       &__left{
         .work-photo{
-
         }
         .btn-box{
           display:flex;
           justify-content:center;
-          padding-top:20px;
-          text-decoration:none;
-          .editBtn{
+          .editBtn__btn{
+            border-radius:20px;
+            margin:30px 20px;
             text-decoration:none;
-            &__btn{
+            width:120px;
+            height:30px;
+            color:white;
+            background-color:rgb(115, 117, 115);
+            font-size:16px;
+            border:none;
+            padding-top:5px;
+            .editBtn{
+              margin:0px 20px;
+              text-decoration:none;
+              width:120px;
+              height:30px;
+              background-color:rgb(115, 117, 115);
+              font-size:16px;
+              border:none;
+              padding-top:5px;
+              color:white;
+            }
+          }
+          .destroyBtn__btn{
+            border-radius:20px;
+            margin:30px 20px;
+            text-decoration:none;
+            width:120px;
+            height:30px;
+            color:white;
+            background-color:rgb(115, 117, 115);
+            font-size:16px;
+            border:none;
+            padding-top:5px;
+            .destroyBtn{
               margin:0px 20px;
               text-decoration:none;
               width:120px;
@@ -39,49 +68,10 @@
               padding-top:5px;
             }
           }
-          .destroyBtn{
-            &__btn{
-              margin:0px 20px;
-              text-decoration:none;
-              width:120px;
-              height:30px;
-              color:white;
-              background-color:black;
-              font-size:16px;
-              border:none;
-              padding-top:5px;
-
-            }
-          }
-          .starBtn{
-            &__btn{
-              margin:0px 20px;
-              text-decoration:none;
-              width:120px;
-              height:30px;
-              color:white;
-              background-color:rgb(115, 117, 115);
-              font-size:16px;
-              border:none;
-              padding-top:5px;
-
-            }
-          }
-          .dmBtn{
-            &__btn{
-              margin:0px 20px;
-              text-decoration:none;
-              width:120px;
-              height:30px;
-              color:white;
-              background-color:black;
-              font-size:16px;
-              border:none;
-              padding-top:5px;
-
-            }
-          }
+          
         }
+
+
       }
       &__right{
         text-align:left;

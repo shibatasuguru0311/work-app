@@ -7,10 +7,10 @@
         - if user_signed_in? 
           - if current_user.id == @work.user_id
             .btn-box
-            .editBtn__btn
-            = link_to "EDIT", edit_work_path(@work), calss: "editBtn"
-            .destroyBtn__btn
-            = link_to "DESTROY", work_path(@work),method: :delete, class: "destroyBtn"
+              .editBtn__btn
+                = link_to "EDIT", edit_work_path(@work),method: :get, class: "editBtn"
+              .destroyBtn__btn
+                = link_to "DESTROY", work_path(@work),method: :delete, class: "destroyBtn"
 
           - else
         - else
@@ -28,8 +28,14 @@
         .work-url      
           =@work.url
         .work-user-sub  ▲開催者マイページ
-        .work-user      
-          = link_to "#{@work.user.name}", user_path(@work.user_id), method: :get, class: "work-user"
+        - if user_signed_in? 
+          .work-user      
+            = link_to "#{@work.user.name}", user_path(@work.user_id), method: :get, class: "work-user"
+        - else
+          .work-user  
+            = link_to "ログイン後に確認", new_user_session_path, method: :get, class: "work-user"
+        
+
 .footer
   = render "footer"
 
