@@ -1,0 +1,134 @@
+.show{
+  padding-bottom:50px;
+  background-color:rgb(243, 243, 243);
+  &__box{
+    background-color:rgb(243, 243, 243);
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+    width:100vw;
+    &__inner{
+      background-color: white;
+      text-align:center;
+      padding:60px 5px;
+      width:1100px;
+      height:500px;
+      margin: 0 auto;
+      display:flex;
+      justify-content:space-around;
+
+      &__left{
+        .work-photo{
+
+        }
+        .btn-box{
+          display:flex;
+          justify-content:center;
+          padding-top:20px;
+          text-decoration:none;
+          .editBtn{
+            text-decoration:none;
+            &__btn{
+              margin:0px 20px;
+              text-decoration:none;
+              width:120px;
+              height:30px;
+              color:white;
+              background-color:rgb(115, 117, 115);
+              font-size:16px;
+              border:none;
+              padding-top:5px;
+            }
+          }
+          .destroyBtn{
+            &__btn{
+              margin:0px 20px;
+              text-decoration:none;
+              width:120px;
+              height:30px;
+              color:white;
+              background-color:black;
+              font-size:16px;
+              border:none;
+              padding-top:5px;
+
+            }
+          }
+          .starBtn{
+            &__btn{
+              margin:0px 20px;
+              text-decoration:none;
+              width:120px;
+              height:30px;
+              color:white;
+              background-color:rgb(115, 117, 115);
+              font-size:16px;
+              border:none;
+              padding-top:5px;
+
+            }
+          }
+          .dmBtn{
+            &__btn{
+              margin:0px 20px;
+              text-decoration:none;
+              width:120px;
+              height:30px;
+              color:white;
+              background-color:black;
+              font-size:16px;
+              border:none;
+              padding-top:5px;
+
+            }
+          }
+        }
+      }
+      &__right{
+        text-align:left;
+      h1{
+        font-size: 16px;
+        font-weight: bold;
+        padding-top:10px;
+        text-decoration-line: underline;
+      }
+      .work-name{
+        font-size:32px;
+        font-weight: bold;
+        padding:15px 0px;
+      }
+      .work-introduction-sub{
+        font-size: 16px;
+        font-weight: bold;
+        padding-top:30px;
+        text-decoration-line: underline;
+      }
+      .work-introduction{
+        font-size:20px;
+        padding-top:10px;
+      }
+      .work-address-sub{
+        font-size: 16px;
+        font-weight: bold;
+        padding-top:30px;
+        text-decoration-line: underline;
+      }
+      .work-address{
+        font-size:20px;
+        padding-top:10px;
+      }
+      .work-url-sub{
+        font-size: 16px;
+        font-weight: bold;
+        padding-top:30px;
+        text-decoration-line: underline;
+      }
+      .work-url{
+        font-size:20px;
+        padding-top:10px;
+      }
+    }
+  }
+
+  }
+}
+
