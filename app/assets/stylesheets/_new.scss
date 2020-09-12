@@ -27,7 +27,6 @@
   margin-top:5px;
   padding-left: 10px;
 }
-
 .edit{
   &__box{
     &__logo{
@@ -72,8 +71,7 @@
           &__form__input{
             &__text__type{
                 @include text-content;
-              }
-            
+              }      
           }
         }
         &__introduction{
@@ -99,8 +97,7 @@
               margin-bottom:30px;
               margin-top:5px;
               padding-left: 10px;
-              }
-            
+              }       
           }
         }
         &__address{
@@ -118,8 +115,7 @@
           &__form__input{
             &__text__type{
                 @include text-content;
-              }
-            
+              }  
           }
         }
         &__url{
@@ -137,8 +133,7 @@
           &__form__input{
             &__text__type{
                 @include text-content;
-              }
-            
+              }          
           }
         }
         &__photo{
@@ -157,8 +152,7 @@
           &__form__input{
             &__text__type{
                 @include text-content;
-              }
-            
+              }   
           }
         }
       }
@@ -174,7 +168,6 @@
               background-color:rgb(115, 117, 115);
               font-size:20px;
               border:none;
-
             }
           }
           &__return{
@@ -189,7 +182,6 @@
               border:none;
               padding:13px 80px;
               text-decoration:none;
-
             }
           }
         }

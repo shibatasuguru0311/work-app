@@ -12,11 +12,9 @@
       font-weight:bold;
       margin:0px 0px 10px 50px;
       color:rgba(8, 19, 8, 0.24);
-
     }
   }
 }
-
 .toppage{
   .header-list{
     &__content{
@@ -94,14 +92,11 @@
           .link-all{
             .workbox__content__photo{
               &__img{
-                width:240px;
-                height:180px;
+                width:250px;
+                height:200px;
                 text-align:center;
-                
-
               }
-            }
-          
+            }        
             .workbox__content__group{
               &__text{
                 list-style:none;
@@ -109,7 +104,6 @@
                  li.workshop__name{
                   font-size:18px;
                   text-decoration:none;
-
                 }
                 .workshop__in{
                   .workshop__middle{
@@ -117,19 +111,16 @@
                       font-size:12px;
                       text-decoration:none;
                       margin-top:10px;
-
                     }
                   }
                 }
               }
             }
-          }
-          
+          }    
         }
       }
     }
   }
-
 }
 .pagenation{
   background-color:gray;
@@ -142,7 +133,6 @@
     height:100%;
   }
 }
-
 .footer{
   background-color:black;
   &__inner{
@@ -151,8 +141,7 @@
       color:rgb(165, 177, 165);
       font-size:24px;
       padding-top:70px;
-      font-weight:bold;
-      
+      font-weight:bold;  
     }
     &__link{
       display:flex;
@@ -160,19 +149,15 @@
       color:white;
       font-size:14px;
       margin-top:8px;
-      &__facebook{
-        
+      &__facebook{      
       }
       &__twitter{
-        margin:0px 20px;
-        
+        margin:0px 20px;   
       }
-      &__instagram{
-        
+      &__instagram{     
       }
       &__youtube{
-        margin:0px 0px 0px 20px;
-        
+        margin:0px 0px 0px 20px;    
       }
     }
     &__info{
@@ -202,11 +187,9 @@
   opacity:70%;
   padding-top:15px;
   cursor: pointer;
-  // position: relative;
   &:hover{
     opacity:50%;
   }
-  
   &__link{
     color: white;
     text-decoration:none;
@@ -229,30 +212,11 @@
     display: block;
     height: 100%;
     width: 100%;
-
   }
 }
-
 .pagination {
   display:flex;
   justify-content: center;
-}
-
-.pagination>li>a {          
-  border: none;     /*枠線をなくす*/
-  color: #696969;   /*文字の色を変える*/
-  text-decoration:none;
-}
-
-/* 表示しているページ番号のデザイン */
-.pagination>.active>a {     
-  background: #6996793d;     /*背景の色を変える*/
-  border-radius: 15px;     /*角を丸くする*/
-}
-
-/*ホバー時のデザイン*/
-.pagination>li>a:hover {        
-  border-radius: 15px;    /*角を丸くする*/
 }
 
 

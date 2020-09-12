@@ -42,17 +42,15 @@ def unfollow
 end
 #フォローを外す
 
-
 def follow_list
 @user = User.find(params[:user_id])
 end
-#フォローしてる人の一覧ページ
+#フォローしてる人の一覧
 
 def follower_list
 @user = User.find(params[:user_id])
 end
-#フォロワーの一覧ページ
-
+#フォロワーの一覧
 
 def edit
   @user = User.find(params[:id])
@@ -71,9 +69,5 @@ end
  def user_params
    params.require(:user).permit(:name, :email, :profile, :image, :password, :id)
  end
-
-
-
-
 
 end

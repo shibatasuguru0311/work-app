@@ -11,7 +11,6 @@ class WorksController < ApplicationController
     end
   end
 
-
   def create
     @work = Work.new(work_params)
     if @work.save!
