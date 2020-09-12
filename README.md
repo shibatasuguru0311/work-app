@@ -89,8 +89,6 @@
 使用gem
 
 - devise
-- kaminari
-- acts_as_follower
 - carrierwave
 - mini_magick
 
@@ -151,6 +149,13 @@
 
 
 ## Workテーブル
+
+使用gem
+
+- kaminari
+- acts_as_follower
+- carrierwave
+- mini_magick
 
 
 |Column|Type|Options|
