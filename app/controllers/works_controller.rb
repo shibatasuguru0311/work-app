@@ -1,7 +1,6 @@
 class WorksController < ApplicationController
   def index
-    @works = Work.order('created_at DESC')
-    @works = Work.all.page(params[:page]).per(5)
+    @works = Work.page(params[:page]).per(5).order('created_at DESC')
   end
 
   def new
@@ -33,8 +32,8 @@ class WorksController < ApplicationController
   def destroy
     @work = Work.find(params[:id])
       if @work.destroy
-        @works = Work.order('created_at DESC')
-        render :index
+        @works = Work.page(params[:page]).per(5).order('created_at DESC')
+        render :destroy
       else
         render :show
       end
