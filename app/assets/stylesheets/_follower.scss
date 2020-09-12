@@ -1,0 +1,52 @@
+.list{
+  &__box{  
+    padding-top:30px;
+    text-align:center;
+    background-color:rgba(241, 239, 237, 0.904);
+    width:100vw;
+    height:800px;
+    &__inner{
+      background-color:white;
+      width:600px;
+      margin: 0 auto;
+      padding-bottom:30px;
+      .list-title{
+        font-size:32px;
+        padding:50px 0px;
+        text-align:center;
+        font-weight:bold;
+      }
+      .personal-name{
+        display:flex;
+        align-items:center;
+        .user-image{
+          margin-left:20px;
+          border-radius:100px;
+          border:1px solid rgb(216, 215, 215);
+
+        }
+        .user-name{
+          text-decoration:none;
+          color:black;
+          font-weight:bold;
+          font-size:24px;
+          margin:20px 5px;
+          text-align:center;
+        }
+      }
+    }
+    .inner__return{
+      margin:50px 0px;
+      .return-btn{
+        background-color:rgb(184, 176, 149);
+        color:white;
+        font-size:24px;
+        padding:10px 50px;
+        border-radius:30px;
+        text-decoration:none;
+        margin-bottom:30px;
+      }
+    }
+
+  }
+}
