@@ -1,11 +1,11 @@
-.Account-in
-  .Account-box
+.user-in
+  .user-box
     .picture
       = link_to root_path do
-        =image_tag "triangle.png", alt: "APP：", class: "picture-img"
-    .AccountPage__form
-      = form_with model: @user, local: true, method: :patch, class: "edit__box__content" do |f|
-        .signin-title SIGN IN
+        =image_tag "triangle.png", alt: "APP：", class: "edit-img"
+    .user__form
+      = form_with model: @user, local: true, method: :patch, class: "user__form__content" do |f|
+        .signin-title EDIT PROFILE
         .FormField
           .FormField__label--normal
             = f.label :name
@@ -38,6 +38,6 @@
         .actions
           = f.submit "Create Account", class: 'actions-btn'
 .footer
-= render "works/footer"
-      
+  = render "works/footer"
         
+          

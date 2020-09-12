@@ -1,0 +1,46 @@
+.create{
+  &__box{
+    background-color:rgba(241, 239, 237, 0.904);
+    text-align: center;
+    padding: 30px 0px 50px 0px;
+    width:100vw;
+    &__logo{
+      text-align:center;
+      padding:30px 0px;
+      &__img{
+        width:150px;
+        height:100px;
+        text-align:center;
+      }
+    }
+    &__contents{
+      background-color: white;
+      text-align:center;
+      padding:0px 20px;
+      width:700px;
+      height:200px;
+      margin: 0 auto;
+      p.finish{
+        padding-top:30px;
+        font-size:24px;
+        font-weight:bold;
+      }
+      .create__box__button{
+        margin:30px;
+        .create__box__button__push{
+          margin:20px;
+          background-color:rgb(105, 112, 95);
+          color:white;
+          border-radius:20px;
+          padding:10px 30px;
+          text-decoration:none;
+        }
+
+      }
+    }
+  }
+}
+
+
+
+

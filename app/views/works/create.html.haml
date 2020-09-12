@@ -1,11 +1,11 @@
-.New__content
-  .New__content__topic
-    .New__content__topic__logo
+.create
+  .create__box
+    .create__box__logo
       = link_to root_path do
-        = image_tag "triangle.png", alt: "FURIMA：", class: "New__content__topic__logo__img"
-    .New__content__topic__info
-      %p.registration__title
+        = image_tag "triangle.png", alt: "WORK-APP：", class: "create__box__logo__img"
+    .create__box__contents
+      %p.finish
         出品が完了しました。
-    .New__content__topic__btn
-      = link_to "トップへ戻る", root_path, class: 'New__content__topic__btn__push'
-      = link_to "商品詳細ページへ進む",work_path(@work.id), class: 'New__content__topic__btn__push'
+      .create__box__button
+        = link_to "トップへ戻る", root_path, class: 'create__box__button__push'
+        = link_to "商品詳細ページへ進む",work_path(@work.id), class: 'create__box__button__push'

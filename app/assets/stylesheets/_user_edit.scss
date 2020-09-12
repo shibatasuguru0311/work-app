@@ -1,0 +1,80 @@
+.user-in{
+  text-align:center;
+  background-color:rgba(241, 239, 237, 0.904);
+  width:100vw;
+  height:800px;
+  .user-box{
+    background-color:white;
+    width:600px;
+    margin: 0 auto;
+    .picture{
+      padding-top:50px;
+      .edit-img{
+        width:200px;
+        height:150px;
+
+      }
+    }
+    .user__form{
+      text-align:center;
+      &__content{
+        .signin-title{
+          font-size:24px;
+          font-weight:bold;
+          margin-bottom:30px;
+
+        }
+        .FormField{
+          &__label--normal{
+            font-size:20px;
+          }
+          &__input--normal{
+            margin-bottom:30px;;
+            #user_name{
+            width:360px;
+            height:30px;
+            border-radius:10px;
+            }
+            #user_email{
+              width:360px;
+              height:30px;
+              border-radius:10px;
+            }
+            #user_profile{
+              width:360px;
+              height:100px;
+              border-radius:10px;
+              border:2px solid black;
+            }
+            #user_password{
+              width:360px;
+              height:30px;
+              border-radius:10px;
+            }
+            #user_password_confirmation{
+              width:360px;
+              height:30px;
+              border-radius:10px;
+            }
+            #user_image{
+             
+            }
+          }
+        }
+        .actions{
+          margin-top:30px;
+          padding-bottom:50px;
+          .actions-btn{
+            width:200px;
+            height:50px;
+            color:white;
+            background-color:rgb(115, 117, 115);
+            font-size:20px;
+            border:none;
+
+          }
+        }
+      }
+    }
+  }
+}

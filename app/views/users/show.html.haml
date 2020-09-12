@@ -10,34 +10,39 @@
         .mypage__box__inner__namebox__main
           =@user.name
       .mypage__box__inner__followbox
-        .mypage__box__inner__followbox__sub ▲FOLLOW: 
-        .mypage__box__inner__followbox__main= @user.follow_count 
-        = link_to "フォローリスト", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get, class: :follow
+        .mypage__box__inner__followbox__sub  ▲FOLLOW: 
+        .mypage__box__inner__followbox__main= @user.follow_count
+        - if user_signed_in?
+          - if @user.id == current_user.id 
+            = link_to "フォローリスト", {controller: :users,action: :follow_list,user_id: @user.id}, method: :get, class: :follow
         -#クリックすると、フォローリストに飛ぶ
       .mypage__box__inner__followersbox
         .mypage__box__inner__followersbox__sub ▲FOLLOWERS:  
         .mypage__box__inner__followersbox__main= @user.followers_count
-        = link_to "フォロワーリスト", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get, class: :followers
+        - if user_signed_in?
+          - if @user.id == current_user.id
+            = link_to "フォロワーリスト", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get, class: :followers
         -#クリックすると、フォロワーリストに飛ぶ
       - if user_signed_in?
         - unless @user.id == current_user.id
           - if @haveRoom == true
-            = link_to "ダイレクトメッセージ", room_path(@roomId)
+            = link_to "DM送る", room_path(@roomId),class: :dmbtn
           - else
             = form_with(model:@room, local: true) do |f|
               = fields_for @entry do |e|
                 = e.hidden_field :user_id, value: @user.id
-              = f.submit "ダイレクトメッセージ"
-    - unless current_user.id==@user.id
-      .follow_form
-        - if current_user.following? @user 
-          = link_to "フォロー解除", {controller: :users,action: :unfollow,user_id: @user.id}, method: :put, class:"btn btn-red50_rsd"
-        -  else 
-          = link_to "フォローする", {controller: :users,action: :follow,user_id: @user.id}, method: :put ,class:"btn btn-red50_rsd" 
-      .mypage__box__inner__return
-        = link_to "戻る", root_path, method: :get, class: 'return-btn'
-    - if current_user.id == @user.id 
-      = link_to "EDIT", edit_user_path(@user), calss: "care"
-              
+              = f.submit "DMを送る",class: :dmbtn
+        - else
+          .edit-care
+            = link_to "プロフィールを編集する", edit_user_path(@user), method: :get, class: 'editcare' 
+      - unless current_user.id==@user.id
+        .follow-box
+          .follow_form
+            - if current_user.following? @user 
+              = link_to "フォロー解除", {controller: :users,action: :unfollow,user_id: @user.id}, method: :put, class:"follow-btn"
+            -  else 
+              = link_to "フォローする", {controller: :users,action: :follow,user_id: @user.id}, method: :put ,class:"unfollow-btn" 
+          .mypage__box__inner__return
+            = link_to "トップページ", root_path, method: :get, class: 'return-btn'        
 .footer
   = render "works/footer"
