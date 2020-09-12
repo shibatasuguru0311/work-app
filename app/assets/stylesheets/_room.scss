@@ -1,0 +1,109 @@
+.room{
+  &__box{
+    padding-top:30px;
+    text-align:center;
+    background-color:rgba(241, 239, 237, 0.904);
+    width:100vw;
+    padding-bottom:100px;
+    &__inner{
+      background-color:white;
+      width:600px;
+      margin: 0 auto;
+      padding-bottom:30px;
+      .room-title{
+        font-size:32px;
+        padding:50px 0px;
+        text-align:center;
+        font-weight:bold;
+      }
+      .user-avator{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-bottom:50px;
+        .user-image{
+          .user-img{
+          }
+        }
+        .user-profile{
+          font-size:20px;
+          font-weight:bold;
+          text-align:center;
+        }
+      }
+      .chat{
+        .chat-space{
+          display:flex;
+          justify-content:left;
+          margin-bottom:10px;
+          margin-left:10px;
+          .chat-face{
+            margin-right:20px;
+           
+            .user-image{
+              border:1px solid gray;
+              border-radius:50px;
+
+            }
+          }
+          .chat-hukidashi{
+            position: relative;
+            display: inline-block;
+            padding: 0 15px;
+            width: auto;
+            min-width: 150px;
+            height: 40px;
+            line-height: 34px;
+            text-align: center;
+            background: #e1f1e1;
+            z-index: 0;
+            border-radius:10px;
+          }
+          .chat-hukidashi:before{
+            border-style: solid;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent  #e1f1e1 transparent;
+            content: "";
+            position: absolute;
+            top: 50%; left: -8px;
+            margin-top: -9px;
+            display: block;
+            width: 0px;
+            height: 0px;
+            z-index: 0;
+          }
+          .chat-hukidashi:after{
+            border-style: solid;
+            border-width: 11px 11px 11px 0;
+            border-color: transparent #e1f1e1 transparent transparent;
+            content: "";
+            position: absolute;
+            top: 50%; left: -12px;
+            margin-top: -10px;
+            display: block;
+            width: 0px;
+            height: 0px;
+            z-index: -1;
+          }
+          
+        }
+      }
+      .posts{
+        margin-top:50px;
+        .chat-speak{
+          #message_message{
+            height:50px;
+            border-radius:10px;
+          }
+          input.form-submit{
+            color:black;
+            background-color:rgb(180, 179, 179);
+            border:1px solid black;
+            padding:10px;
+            border-radius:10px;
+          }
+        }
+      } 
+    }
+  }
+}
