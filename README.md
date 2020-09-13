@@ -27,10 +27,9 @@
 
 
 <br>
- **実装機能紹介**
+ **　実装機能紹介　**
 ---
 
-![7dd5824aaf87aaad46a743b851c486b5](https://user-images.githubusercontent.com/67133171/91562151-b37e4b80-e977-11ea-9786-2a89316b2c18.jpg)
 
 <br>
 
