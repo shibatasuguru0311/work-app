@@ -2,9 +2,6 @@
 # README
 
 
-
-
-
 <br>
 <br>
 
@@ -47,6 +44,8 @@
 ・１対１でチャットができる機能<br>
 ・ログインしないと、チャットができないよう実装 
 
+![action1](https://user-images.githubusercontent.com/67133171/93013598-cbdf9e80-f5e4-11ea-8fa4-17858071899a.gif)
+
 <br>
 
 ### ワークショップ開催、詳細機能
@@ -63,7 +62,7 @@
 ・acts_as_follower　gemを使用して、フォロー機能の実装<br>
 ・自身がフォローしている相手を一覧で確認できるよう実装<br>
 ・自身のフォロワーを一覧で確認できるよう実装<br>
-<img width="595" alt="bf20774b9a7760d73350dfa4adc8486f" src="https://user-images.githubusercontent.com/67133171/93013215-4ad2d800-f5e1-11ea-9abc-952077d0b89e.png">
+![action2](https://user-images.githubusercontent.com/67133171/93013634-1d882900-f5e5-11ea-844c-0c4c9c733a6f.gif)
 <br>
 
 ## ログイン新規登録機能
