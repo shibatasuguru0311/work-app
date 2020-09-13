@@ -27,7 +27,7 @@
 
 
 <br>
- **　実装機能紹介　**
+# 実装機能紹介
 ---
 
 
@@ -66,7 +66,7 @@
 <img width="595" alt="bf20774b9a7760d73350dfa4adc8486f" src="https://user-images.githubusercontent.com/67133171/93013215-4ad2d800-f5e1-11ea-9abc-952077d0b89e.png">
 <br>
 
-##　ログイン新規登録機能
+## ログイン新規登録機能
 ・devise gemを使用して、新規登録機能の実装<br>
 .デフォルトのemail password以外に、name photo profileカラムを追加してマイページを作成
 <img width="1127" alt="f85ac69dcb0379e7119721f3c16b5aa1" src="https://user-images.githubusercontent.com/67133171/93013219-5d4d1180-f5e1-11ea-96f1-b8403f4420c5.png">
