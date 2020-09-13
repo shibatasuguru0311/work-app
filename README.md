@@ -68,7 +68,7 @@
 
 ## ログイン新規登録機能
 ・devise gemを使用して、新規登録機能の実装<br>
-.デフォルトのemail password以外に、name photo profileカラムを追加してマイページを作成
+・デフォルトのemail password以外に、name photo profileカラムを追加してマイページを作成
 <img width="1127" alt="f85ac69dcb0379e7119721f3c16b5aa1" src="https://user-images.githubusercontent.com/67133171/93013219-5d4d1180-f5e1-11ea-96f1-b8403f4420c5.png">
 
 
@@ -85,17 +85,17 @@
         * MySQL
 - 開発期間
     * 開発期間：
-        * 26日間(8/18 ~ 9/13予定 )
+        * 26日間(8/18 ~ 9/13)
     * 平均作業時間：
         * 5時間/1日
 - 動作概要
     * 接続先情報
     * URL：
-        * http://
-    * ID:
-        * --
+        * https://workshop-matching-app.herokuapp.com/
+    * Email:
+        * test@gmail.com
     * Pass:
-        * ——
+        * testtest
         
        
 
