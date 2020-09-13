@@ -2,6 +2,7 @@
   .edit__box
     .edit__box__content
     = form_with model: @work, local: true, method: :post, class: "edit__box__content" do |f|
+      = render 'layouts/error_messages', model: f.object
       .edit__box__content__inner
         %p.edit-title ワークショップ情報の入力
         .edit__box__logo
@@ -12,14 +13,14 @@
             %p.name ワークショップ名
             %p.absolute 必須
           .edit__box__content__inner__name__form__input
-            = f.text_field :name, class: "edit__box__content__inner__name__form__input__text__type", placeholder: "　最大40文字まで"
+            = f.text_field :name, class: "edit__box__content__inner__name__form__input__text__type", placeholder: "　最大30文字まで"
             -#商品の説明
         .edit__box__content__inner__introduction
           .edit__box__content__inner__introduction__explain
             %p.introduction ワークショップの説明
             %p.absolute 必須
           .edit__box__content__inner__introduction__form__input
-            = f.text_area :introduction, class: "edit__box__content__inner__introduction__form__input__text__type", placeholder: "　最大1000文字まで"
+            = f.text_area :introduction, class: "edit__box__content__inner__introduction__form__input__text__type", placeholder: "　最大200文字まで"
             -#商品の金額
         .edit__box__content__inner__address
           .edit__box__content__inner__address__explain

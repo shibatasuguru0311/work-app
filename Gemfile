@@ -60,3 +60,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem "font-awesome-sass"
 gem "acts_as_follower", github: "tcocca/acts_as_follower"
+gem 'rails-i18n'
+gem 'rspec-rails', '~> 4.0.0.beta2'

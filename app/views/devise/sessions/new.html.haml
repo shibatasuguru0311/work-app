@@ -6,6 +6,7 @@
       =image_tag "triangle.png", alt: "APP：", class: "picture__img"
   .AccountPage__box
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = render 'layouts/error_messages', model: f.object
       .signin-title LOG IN
       .FormBox
         .FormBox__label--normal

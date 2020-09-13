@@ -5,6 +5,7 @@
         =image_tag "triangle.png", alt: "APP：", class: "edit-img"
     .user__form
       = form_with model: @user, local: true, method: :patch, class: "user__form__content" do |f|
+        = render 'layouts/error_messages', model: f.object
         .signin-title EDIT PROFILE
         .FormField
           .FormField__label--normal

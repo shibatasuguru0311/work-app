@@ -12,8 +12,9 @@ class User < ApplicationRecord
   acts_as_followable
   acts_as_follower
        
-validates :name, presence: true, uniqueness: true, length: { maximum: 10 } 
+validates :name, presence: true, length: { maximum: 10 } 
 validates :email, presence: true, uniqueness: true
 validates :image, presence: true
+validates :profile, presence: true, length: { maximum: 200 } 
 
 end

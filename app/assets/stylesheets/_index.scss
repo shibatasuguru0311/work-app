@@ -11,7 +11,7 @@
       font-size:20px;
       font-weight:bold;
       margin:0px 0px 10px 50px;
-      color:rgba(8, 19, 8, 0.24);
+      color:black;
     }
   }
 }
@@ -21,7 +21,7 @@
     display:flex;
     justify-content:left;
     align-items:center;
-    background-color:black;
+    background-color:rgb(185, 178, 147);
     height:50px;
     padding-left:50px;
       &--logout{
@@ -217,7 +217,7 @@
 .pagination {
   display:flex;
   justify-content: center;
-  color:greenyellow;
+  color:brown;
 
 }
 

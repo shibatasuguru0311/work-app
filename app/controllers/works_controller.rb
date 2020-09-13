@@ -13,7 +13,7 @@ class WorksController < ApplicationController
 
   def create
     @work = Work.new(work_params)
-    if @work.save!
+    if @work.save
     else
       render :new
     end
@@ -34,6 +34,7 @@ class WorksController < ApplicationController
         @works = Work.page(params[:page]).per(5).order('created_at DESC')
         render :destroy
       else
+        flash.now[:alert] = '中止に失敗しました。'
         render :show
       end
   end
