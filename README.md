@@ -1,11 +1,15 @@
 
 # README
 
+
+
+
+
 <br>
 <br>
 
 ## ワークショップマッチングアプリを作成しました。
-
+![35e3b046d73a716e2857bc471c62b778](https://user-images.githubusercontent.com/67133171/93013212-44dcf700-f5e1-11ea-878c-2e585459dda1.jpg)
 <br>
 
 ## 背景
@@ -36,7 +40,7 @@
 
 ・kaminari gemを使用して、ページネーションを実装<br>
 ・新着順に並び替え、５枚ごとに表示
-
+![2125e191333929699d09107f7367c6b9](https://user-images.githubusercontent.com/67133171/93013220-60e09880-f5e1-11ea-8b5f-63ccc7a98778.jpg)
 <br>
 
 ### ダイレクトメール機能
@@ -53,14 +57,21 @@
 ・ログイン時に確認できるよう実装<br>
 ・自身が開催した場合に限り、編集削除ができるよう実装
 
+<img width="1439" alt="8c5ccd1d579eab95d7097ba8e0241218" src="https://user-images.githubusercontent.com/67133171/93013217-54f4d680-f5e1-11ea-8366-405cc5cdb17b.png">
 <br>
 
 ### フォロー機能
 ・acts_as_follower　gemを使用して、フォロー機能の実装<br>
 ・自身がフォローしている相手を一覧で確認できるよう実装<br>
 ・自身のフォロワーを一覧で確認できるよう実装<br>
-
+<img width="595" alt="bf20774b9a7760d73350dfa4adc8486f" src="https://user-images.githubusercontent.com/67133171/93013215-4ad2d800-f5e1-11ea-9abc-952077d0b89e.png">
 <br>
+
+##ログイン新規登録機能
+・devise gemを使用して、新規登録機能の実装<br>
+.デフォルトのemail password以外に、name photo profileカラムを追加してマイページを作成
+<img width="1127" alt="f85ac69dcb0379e7119721f3c16b5aa1" src="https://user-images.githubusercontent.com/67133171/93013219-5d4d1180-f5e1-11ea-96f1-b8403f4420c5.png">
+
 
 ## 開発状況
 ---
