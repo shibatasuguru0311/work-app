@@ -1,11 +1,14 @@
 
 # README
 
+
 <br>
 <br>
 
 ## ワークショップマッチングアプリを作成しました。
+<img width="1439" alt="b6b8b5bc5726e43af9539cbd250d73c1" src="https://user-images.githubusercontent.com/67133171/93014289-e583e480-f5ea-11ea-943f-9c47a7e45b3c.png">
 
+![35e3b046d73a716e2857bc471c62b778](https://user-images.githubusercontent.com/67133171/93013212-44dcf700-f5e1-11ea-878c-2e585459dda1.jpg)
 <br>
 
 ## 背景
@@ -23,10 +26,11 @@
 
 
 <br>
- **実装機能紹介**
+
+## 実装機能紹介
+
 ---
 
-![7dd5824aaf87aaad46a743b851c486b5](https://user-images.githubusercontent.com/67133171/91562151-b37e4b80-e977-11ea-9786-2a89316b2c18.jpg)
 
 <br>
 
@@ -36,13 +40,15 @@
 
 ・kaminari gemを使用して、ページネーションを実装<br>
 ・新着順に並び替え、５枚ごとに表示
-
+![2125e191333929699d09107f7367c6b9](https://user-images.githubusercontent.com/67133171/93013220-60e09880-f5e1-11ea-8b5f-63ccc7a98778.jpg)
 <br>
 
 ### ダイレクトメール機能
 
 ・１対１でチャットができる機能<br>
 ・ログインしないと、チャットができないよう実装 
+
+![action1](https://user-images.githubusercontent.com/67133171/93013598-cbdf9e80-f5e4-11ea-8fa4-17858071899a.gif)
 
 <br>
 
@@ -53,14 +59,21 @@
 ・ログイン時に確認できるよう実装<br>
 ・自身が開催した場合に限り、編集削除ができるよう実装
 
+<img width="1439" alt="8c5ccd1d579eab95d7097ba8e0241218" src="https://user-images.githubusercontent.com/67133171/93013217-54f4d680-f5e1-11ea-8366-405cc5cdb17b.png">
 <br>
 
 ### フォロー機能
 ・acts_as_follower　gemを使用して、フォロー機能の実装<br>
 ・自身がフォローしている相手を一覧で確認できるよう実装<br>
 ・自身のフォロワーを一覧で確認できるよう実装<br>
-
+![action2](https://user-images.githubusercontent.com/67133171/93013634-1d882900-f5e5-11ea-844c-0c4c9c733a6f.gif)
 <br>
+
+## ログイン新規登録機能
+・devise gemを使用して、新規登録機能の実装<br>
+・デフォルトのemail password以外に、name photo profileカラムを追加してマイページを作成
+<img width="1127" alt="f85ac69dcb0379e7119721f3c16b5aa1" src="https://user-images.githubusercontent.com/67133171/93013219-5d4d1180-f5e1-11ea-96f1-b8403f4420c5.png">
+
 
 ## 開発状況
 ---
@@ -75,17 +88,17 @@
         * MySQL
 - 開発期間
     * 開発期間：
-        * 26日間(8/18 ~ 9/13予定 )
+        * 24日間(8/20 ~ 9/13)
     * 平均作業時間：
         * 5時間/1日
 - 動作概要
     * 接続先情報
     * URL：
-        * http://
-    * ID:
-        * --
+        * https://workshop-matching-app.herokuapp.com/
+    * Email:
+        * test@gmail.com
     * Pass:
-        * ——
+        * testtest
         
        
 
